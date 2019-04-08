@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
-<title>Quantum0 Site</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-</style>
+<head>
+	<title>Quantum0</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://vk.com/js/api/openapi.js?160" type="text/javascript"></script>
+	<style>
+	html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+	</style>
+	<script type="text/javascript">
+		VK.init({apiId: 6935358, onlyWidgets: true});
+	</script>
+</head>
 <body class="w3-black">
 
 	<div id="modal01" class="w3-modal w3-center w3-padding-48" onclick="this.style.display='none'">
@@ -18,6 +24,25 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	function openModal(element) {
 	  document.getElementById("img01").src = element.src;
 	  document.getElementById("modal01").style.display = "block";
+	}
+	function changeSkillsView()
+	{
+		var x = document.getElementById("skills_as_diagram");
+		var y = document.getElementById("skills_as_list");
+		var b = document.getElementById("btn_skills_view");
+		
+		if (b.innerText == "Show As Diagram")
+		{
+			x.className = x.className.replace(" w3-hide", "");
+			y.className += " w3-hide";
+			b.innerHTML = "<b>Show As List</b>"
+		}
+		else
+		{	
+			y.className = y.className.replace(" w3-hide", "");
+			x.className += " w3-hide";
+			b.innerHTML = "<b>Show As Diagram</b>"
+		}
 	}
 	</script>
 	
@@ -41,23 +66,23 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-orange"></i>Developer</p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-orange"></i>Moscow, Russia</p>
           <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-orange"></i><a href="mailto://quantum0@mail.ru">quantum0@mail.ru</a></p>
-          <p><i class="fa fa-telegram fa-fw w3-margin-right w3-large w3-text-orange"></i><a href="tg://resolve?domain=quantum0">@Quantum0</a></p> <!--fa-phone-->
+          <p><i class="fa fa-telegram fa-fw w3-margin-right w3-large w3-text-orange"></i><a href="tg://resolve?domain=quantum0">@quantum0</a></p> <!--fa-phone-->
           <hr>
 
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-orange"></i>Development skills</b></p>
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-orange"></i>Main Skills</b></p>
           <p>Python</p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-orange" style="width:85%">85%</div>
+            <div class="w3-container w3-center w3-round-xlarge w3-orange" style="height:20px;width:85%"></div>
           </div>
           <p>C#</p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-orange" style="width:70%">
-              <div class="w3-center w3-text-black">70%</div>
+            <div class="w3-container w3-center w3-round-xlarge w3-orange" style="height:20px;width:70%">
+              <div class="w3-center w3-text-black"></div>
             </div>
           </div>
           <p>C++</p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-orange" style="width:45%">45%</div>
+            <div class="w3-container w3-center w3-round-xlarge w3-orange" style="height:20px;width:45%"></div>
           </div>
           <br>
 
@@ -93,12 +118,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <hr>
         </div>
         <div class="w3-container">
-          <h5 class="w3-text-black"><b>Developer / ООО "Вебкран"</b></h5>
-          <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2017 - Apr 2019</h6>
+          <!--<h5 class="w3-text-black"><b>Developer / ООО "Вебкран"</b></h5>-->
+		  <h5 class="w3-text-black"><b>Developer / Фриланс/Частная практика</b></h5>
+          <!--<h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2017 - Apr 2019</h6>-->
+          <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2019</h6>
           <ul>
-			<li>Разработка встраиваемых систем: AVR, ESP8266, Raspberry Pi</li>
-			<li>Разработка Desktop-приложений (C#)
+			<li>Разработка встраиваемых систем (AVR, ESP8266, Raspberry Pi)</li>
+			<li>Разработка Desktop-приложений (C#)</li>
 			<li>Backend-разработка (Python, Flask, RabbitMQ, MQTT)</li>
+			<li>Game development (Unity, C#)</li>
 		  </ul>
           <hr>
         </div>
@@ -127,13 +155,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	  
 	  <div class="w3-container w3-card w3-light-gray w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-star fa-fw w3-margin-right w3-xxlarge w3-text-orange"></i>Skills</h2>
-		<div class="w3-container">
-			<div class="w3-margin-bottom">
+		<div class="w3-container w3-margin-bottom">
+			<button id="btn_skills_view" onclick="changeSkillsView()" class="w3-margin-bottom w3-btn w3-right w3-padding-small w3-yellow w3-hover-deep-orange"><b>Show As Diagram</b></button>
+			<div id="skills_as_list" class="w3-container">
 				<div class="w3-center w3-margin-bottom"><b>Programming languages</b><br></div>
 				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Python</div>
 				<div class="w3-tag w3-amber w3-round w3-margin-bottom">C#</div>
 				<div class="w3-tag w3-amber w3-round w3-margin-bottom">C++</div>
 				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Action Script</div>
+				<div class="w3-tag w3-amber w3-round w3-margin-bottom">GML</div>
 				<br>
 				<div class="w3-center w3-margin-bottom"><b>IDEs and Editors</b><br></div>
 				<div class="w3-tag w3-lime w3-round w3-margin-bottom">PyCharm</div>
@@ -143,28 +173,33 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 				<div class="w3-tag w3-lime w3-round w3-margin-bottom">Unity</div>
 				<br>
 				<div class="w3-center w3-margin-bottom"><b>Frameworks</b><br></div>
-				<div class="w3-tag w3-gray w3-round w3-margin-bottom">.NET Framework</div>
-				<div class="w3-tag w3-gray w3-round w3-margin-bottom">Flask</div>
-				<div class="w3-tag w3-gray w3-round w3-margin-bottom">Arduino Framework</div>
+				<div class="w3-tag w3-light-green w3-round w3-margin-bottom">.NET Framework</div>
+				<div class="w3-tag w3-light-green w3-round w3-margin-bottom">Flask</div>
+				<div class="w3-tag w3-light-green w3-round w3-margin-bottom">Arduino Framework</div>
 				<br>
 				<div class="w3-center w3-margin-bottom"><b>Technologies</b><br></div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Internet Of Things</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Embedded Systems</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Virtual Reality</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Microcontrollers</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Raspberry Pi</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Linux</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">VDS/VPS</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Game development</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Databases</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">REST API</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">VK API</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Telegram Bot API</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">SQLAlchemy</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Git</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">Object-Oriented Programming</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">RabbitMQ</div>
-				<div class="w3-tag w3-amber w3-round w3-margin-bottom">MQTT</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Internet Of Things</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Embedded Systems</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Virtual Reality</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Microcontrollers</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Raspberry Pi</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Linux</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">VDS/VPS</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Game development</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Databases</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">REST API</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">VK API</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Telegram Bot API</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">SQLAlchemy</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Git</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">RabbitMQ</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">MQTT</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Genetic Algorithm</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Multi-threading</div>
+				<div class="w3-tag w3-light-blue w3-round w3-margin-bottom">Adafruit Libraries</div>
+			</div>
+			<div id="skills_as_diagram" class="w3-container w3-hide">
+			  <img class="w3-hover-opacity w3-round-medium w3-border w3-border-black" src="images/skills-diagram.jpg" style="width:100%" onclick="openModal(this)" alt="Skills Diagram">
 			</div>
 		</div>
       </div>
@@ -172,64 +207,87 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	  <div class="w3-container w3-card w3-light-gray w3-margin-bottom">
 		<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-orange"></i>Certificates</h2>
 		<div class="w3-container w3-center w3-margin-bottom">
-			<img src="https://openportfolio.ru/uploads/images/1KYsEGHGXHwuCiUkDmox8qCrV1phNUsWgd.jpg" style="width:48%" onclick="openModal(this)" alt="EdCrunch 2017 Cert"> 
-			<img src="images/Scan_20190407 (7).jpg" style="width:48%" onclick="openModal(this)" alt="OpenStack Cert">
-			<img src="images/Scan_20190407 (9).jpg" style="width:24%" onclick="openModal(this)" alt="Диплом Всеросс Муницип. Математика 2012">
-			<img src="images/Scan_20190407 (6).jpg" style="width:24%" onclick="openModal(this)" alt="Диплом Всеросс Муницип. Информатика 2011">
-			<img src="images/Scan_20190407 (8).jpg" style="width:24%" onclick="openModal(this)" alt="Диплом Всеросс Муницип. Информатика 2012">
-			<img src="images/Scan_20190407.jpg" style="width:24%" onclick="openModal(this)" alt="Диплом Всеросс Муницип. Математика 2011">
-			<img src="images/Scan_20190407 (10).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Олимп. 1">
-			<img src="images/Scan_20190407 (11).jpg" style="width:24%" onclick="openModal(this)" alt="Доклад Игра. Декада Наук">
-			<img src="images/Scan_20190407 (12).jpg" style="width:24%" onclick="openModal(this)" alt="Диплом Декада Наук">
-			<img src="images/Scan_20190407 (13).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Олимп. 3">
-			<img src="images/Scan_20190407 (2).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Науч. док. 2014">
-			<img src="images/Scan_20190407 (4).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Рег. олимп. 2012">
-			<img src="images/Scan_20190407 (3).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Рег. олимп. 2013">
-			<img src="images/Scan_20190407 (5).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Рег. олимп. 2014">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="https://openportfolio.ru/uploads/images/1KYsEGHGXHwuCiUkDmox8qCrV1phNUsWgd.jpg" style="width:39%" onclick="openModal(this)" alt="EdCrunch 2017 Cert">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/IMG_20170926_113339.jpg" style="width:21%" onclick="openModal(this)" alt="EdHack 2017 Glass Thing x>">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (7).jpg" style="width:39%" onclick="openModal(this)" alt="OpenStack Cert">
+			<br>
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/052_EdHack_-1.jpg" style="width:19%" onclick="openModal(this)" alt="EdHack 2017">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (9).jpg" style="width:19%" onclick="openModal(this)" alt="Диплом Всеросс Муницип. Математика 2012">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (6).jpg" style="width:19%" onclick="openModal(this)" alt="Диплом Всеросс Муницип. Информатика 2011">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (8).jpg" style="width:19%" onclick="openModal(this)" alt="Диплом Всеросс Муницип. Информатика 2012">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407.jpg" style="width:19%" onclick="openModal(this)" alt="Диплом Всеросс Муницип. Математика 2011">
+			<br>
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (10).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Олимп. 1">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (11).jpg" style="width:24%" onclick="openModal(this)" alt="Доклад Игра. Декада Наук">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (12).jpg" style="width:24%" onclick="openModal(this)" alt="Диплом Декада Наук">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (13).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Олимп. 3">
+			<br>
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (2).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Науч. док. 2014">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (4).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Рег. олимп. 2012">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (3).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Рег. олимп. 2013">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/Scan_20190407 (5).jpg" style="width:24%" onclick="openModal(this)" alt="МГОГИ Рег. олимп. 2014">
+			<br>
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/106742_429567.ru-1.jpg" style="width:19%" onclick="openModal(this)" alt="GeekBrains Python Base Cert">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/106742_583444.ru-1.jpg" style="width:19%" onclick="openModal(this)" alt="GeekBrains Python OOP Cert">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/106742_583446.en-1.jpg" style="width:19%" onclick="openModal(this)" alt="GeekBrains English A2 Cert">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/106742_583455.ru-1.jpg" style="width:19%" onclick="openModal(this)" alt="GeekBrains English B1 Cert">
+			<img class="w3-hover-opacity w3-border w3-border-deep-orange" src="images/106742_41892.ru-1.jpg" style="width:19%" onclick="openModal(this)" alt="GeekBrains C# Base Cert">
 		</div>
 	  </div>
 	  
 	  <div class="w3-container w3-card w3-light-gray w3-margin-bottom">
 		<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-orange"></i>Projects</h2>
 		<div class="w3-container">
+		
 			<div class="w3-container">
 			  <h5 class="w3-text-black"><b>LED lighting for stairs</b></h5>
 			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - 2019</h6>
-			  <p>Status: <span class="w3-tag w3-green w3-round">Finished</span>, periodicaly updates with new lighting modes</p>
+			  <p>Status: <span class="w3-tag w3-green w3-round">Finished</span>, periodicaly updates with new lighting modes.</p>
 			  <div class="w3-margin-left">
-			  <img src="images/led_stairs_youtube_preview.png" style="width:60%" onclick="openModal(this)" alt="Видео-демонстрация светодиодной лестницы"><br>
-			  <img src="https://pp.userapi.com/c846420/v846420422/1dedb1/C7Z2idG2_4A.jpg" style="width:16%" onclick="openModal(this)" alt="Фото LED-подсветки лестницы 1">
-			  <img src="https://pp.userapi.com/c847019/v847019422/1e2ef2/841c-3lXGNk.jpg" style="width:28%" onclick="openModal(this)" alt="Фото LED-подсветки лестницы 2">
-			  <img src="https://pp.userapi.com/c852024/v852024189/f8522/au0tswX31gA.jpg" style="width:16%" onclick="openModal(this)" alt="Фото LED-подсветки лестницы 3">
+			  <div class="w3-display-container w3-margin-bottom" style="width:80%">
+				<img class="w3-hover-opacity" onclick="openModal(this)" src="https://i1.ytimg.com/vi/22LzpoCJLhE/maxresdefault.jpg" style="width:100%">
+				<div class="w3-display-middle w3-display-hover w3-xlarge">
+					<a href="https://youtu.be/22LzpoCJLhE">
+						<button class="w3-button w3-black w3-padding-0"><i class="fa fa-play-circle fa-fw w3-xlarge"></i> Play</button>
+					</a>
+				</div>
+			  </div>
+			  <img class="w3-hover-opacity" src="https://pp.userapi.com/c846420/v846420422/1dedb1/C7Z2idG2_4A.jpg" style="width:16%" onclick="openModal(this)" alt="Фото LED-подсветки лестницы 1">
+			  <img class="w3-hover-opacity" src="https://pp.userapi.com/c847019/v847019422/1e2ef2/841c-3lXGNk.jpg" style="width:28%" onclick="openModal(this)" alt="Фото LED-подсветки лестницы 2">
+			  <img class="w3-hover-opacity" src="https://pp.userapi.com/c852024/v852024189/f8522/au0tswX31gA.jpg" style="width:16%" onclick="openModal(this)" alt="Фото LED-подсветки лестницы 3">
 			  <p>Подсветка для лестницы на основе управляемой адресной светодиодной ленты.</p>
-			  <p><u>Используемые технологии и/или железо:</u><br>Arduino, Адресная светодиодная лента WS2812, Пироэлектрический датчик движения<p>
+			  <p><u>Используемые технологии и/или железо:</u><br>Arduino, Адресная светодиодная лента WS2812, ИК-датчик препятствия<p>
 			  <p><u>Tags:</u><br><span class="w3-text-indigo">#Arduino, #EmbeddedSystems, #IoT, #AVR, #Atmel, #LedStrip, #WS2812</span></p>
 			  </div>
 			  <hr>
 			</div>
+			
 			<div class="w3-container">
 			  <h5 class="w3-text-black"><b>Smart Clocks based on Led Matrix and ESP8266 Module</b></h5>
 			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - 2019</h6>
 			  <p>Status: <span class="w3-tag w3-yellow w3-round">In Progress</span></p>
 			  <div class="w3-margin-left">
-			  <img src="images/led_stairs_youtube_preview.png" style="width:60%" onclick="openModal(this)" alt="Видео-демонстрация работы часов"><br>
-			  <img src="https://pp.userapi.com/c851436/v851436189/f173b/f-w6chUgFYg.jpg" style="width:16%" onclick="openModal(this)" alt="1">
-			  <img src="https://pp.userapi.com/c855536/v855536189/1b3c6/ZdkIr1wgTJo.jpg" style="width:28%" onclick="openModal(this)" alt="2">
-			  <img src="https://pp.userapi.com/c854120/v854120189/1c1f1/upNV1GxJs4E.jpg" style="width:16%" onclick="openModal(this)" alt="3">
+			  <div class="w3-display-container w3-margin-bottom" style="width:80%">
+				<img class="w3-hover-opacity" onclick="openModal(this)" src="https://via.placeholder.com/640x480?text=Smart+Clocks+video+thumbnail+will+be+here+soon" style="width:100%">
+				<div class="w3-display-middle w3-display-hover w3-xlarge">
+					<a href="">
+						<button class="w3-button w3-black w3-padding-0"><i class="fa fa-play-circle fa-fw w3-xlarge"></i> Play</button>
+					</a>
+				</div>
+			  </div>
+			  <img class="w3-hover-opacity" src="https://pp.userapi.com/c851436/v851436189/f173b/f-w6chUgFYg.jpg" style="width:16%" onclick="openModal(this)" alt="1">
+			  <img class="w3-hover-opacity" src="https://pp.userapi.com/c855536/v855536189/1b3c6/ZdkIr1wgTJo.jpg" style="width:28%" onclick="openModal(this)" alt="2">
+			  <img class="w3-hover-opacity" src="https://pp.userapi.com/c854120/v854120189/1c1f1/upNV1GxJs4E.jpg" style="width:16%" onclick="openModal(this)" alt="3">
 			  <p>Умные часы, синхронизирующие время по интернету, показывающие погоду и выводящие информации о приходящих сообщениях</p>
 			  <p><u>Используемые технологии и/или железо:</u><br>ESP8266, Max7219, Touch Button, Buzzer, (BME-280 ?)<p>
 			  <p><u>Tags:</u><br><span class="w3-text-indigo">#ESP8266, #EmbeddedSystems, #IoT, #LedMatrix, #Clock, #Max7219</span></p>
 			  </div>
 			  <hr>
 			</div>
+			
 			<div class="w3-container">
 			  <h5 class="w3-text-black"><b>Maze Generator</b></h5>
 			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2017</h6>
-			  <!--
-			  <p>Status: <span class="w3-tag w3-green w3-round">Finished</span></p>
-			  <p><a href="https://github.com/Quantum-0/MazeGenerator">
-				<span class="w3-tag w3-blue w3-round"><i class="fa fa-github w3-hover-opacity"></i> Github page</span>
-			  </a></p>-->
 			  <table class="w3-table w3-margin-bottom">
 				  <td class="w3-padding-small">Status: <span class="w3-tag w3-green w3-round">Finished</span></td>
 				  <td class="w3-padding-small"><a href="https://github.com/Quantum-0/MazeGenerator">
@@ -237,13 +295,21 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 				  </a></td>
 			  </table>
 			  <div class="w3-margin-left">
-			  <a href="https://www.youtube.com/watch?v=Fx0rE2D2Onc"><img src="https://github.com/Quantum-0/MazeGenerator/raw/master/maze_generator_thumbnail.png" style="width:60%"><br></a>
+			  <div class="w3-display-container" style="width:80%">
+				<img class="w3-hover-opacity" onclick="openModal(this)" src="https://github.com/Quantum-0/MazeGenerator/raw/master/maze_generator_thumbnail.png" style="width:100%">
+				<div class="w3-display-middle w3-display-hover w3-xlarge">
+					<a href="https://youtu.be/Fx0rE2D2Onc?t=9">
+						<button class="w3-button w3-black w3-padding-0"><i class="fa fa-play-circle fa-fw w3-xlarge"></i> Play</button>
+					</a>
+				</div>
+			  </div>
 			  <p>Генератор лабиринтов с визуализацией в консоли.</p>
 			  <p><u>Используемые технологии и/или железо:</u><br>C#, .NET<p>
 			  <p><u>Tags:</u><br><span class="w3-text-indigo">#C#, #DotNet, #DotNetFramework, #Console</span></p>
 			  </div>
 			  <hr>
 			</div>
+			
 			<div class="w3-container">
 			  <h5 class="w3-text-black"><b>Approximation Genetic Alghoritm</b></h5>
 			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2017</h6>
@@ -254,13 +320,21 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 			  </a></td>
 			  </table>
 			  <div class="w3-left w3-margin-left">
-			  <a href="https://www.youtube.com/watch?v=sxBFCBip1Ts"><img src="https://github.com/Quantum-0/Approximation-Genetic-Algorithm/raw/master/ga_video_screenshot.png" style="width:60%"><br></a>
+			  <div class="w3-display-container" style="width:80%">
+				<img class="w3-hover-opacity" onclick="openModal(this)" src="https://github.com/Quantum-0/Approximation-Genetic-Algorithm/raw/master/ga_video_screenshot.png" style="width:100%">
+				<div class="w3-display-middle w3-display-hover w3-xlarge">
+					<a href="https://www.youtube.com/watch?v=sxBFCBip1Ts">
+						<button class="w3-button w3-black w3-padding-0"><i class="fa fa-play-circle fa-fw w3-xlarge"></i> Play</button>
+					</a>
+				</div>
+			  </div>
 			  <p>Практика в реализации искусственного интеллекта на примере генетического алгоритма, задачью которого поставлена апроксимация функции.</p>
 			  <p><u>Используемые технологии и/или железо:</u><br>C#, .NET, WinForms<p>
 			  <p><u>Tags:</u><br><span class="w3-text-indigo">#C#, #DotNet, #DotNetFramework, #WinForms, #ArtificialIntelligence, #AI, #GeneticAlgorithm</span></p>
 			  </div>
 			  <hr>
 			</div>
+			
 			<div class="w3-container">
 			  <h5 class="w3-text-black"><b>Coursework</b></h5>
 			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016-2017</h6>
@@ -271,14 +345,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 			  </a></td>
 			  </table>
 			  <div class="w3-left w3-margin-left">
-			  <img src="https://github.com/Quantum-0/Kursach/raw/master/example.png" style="width:40%" onclick="openModal(this)" alt="1">
-			  <img src="https://github.com/Quantum-0/Kursach/raw/master/example2.png" style="width:40%" onclick="openModal(this)" alt="2">
+			  <img class="w3-hover-opacity" src="https://github.com/Quantum-0/Kursach/raw/master/example.png" style="width:40%" onclick="openModal(this)" alt="1">
+			  <img class="w3-hover-opacity" src="https://github.com/Quantum-0/Kursach/raw/master/example2.png" style="width:40%" onclick="openModal(this)" alt="2">
 			  <p>Построение частотного словаря и проверка закона Ципфа с помощью префиксного дерева. В качестве данных для обработки использовались статьи с Wikipedia, получаемые через API.</p>
 			  <p><u>Используемые технологии и/или железо:</u><br>C#, .NET, WinForms<p>
 			  <p><u>Tags:</u><br><span class="w3-text-indigo">#C#, #DotNet, #DotNetFramework, #MultiThreading, #Многопоточность, #ПараллельныеВычисления, #MapReduce, #Wikipedia, #API, #ПрефиксноеДерево, #Trie</span></p>
 			  </div>
 			  <hr>
 			</div>
+			
 			<div class="w3-container">
 			  <h5 class="w3-text-black"><b>Arduino Buttons Library</b></h5>
 			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019</h6>
@@ -289,28 +364,126 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 			  </a></td>
 			  </table>
 			  <div class="w3-left w3-margin-left">
-			  <p>Библиотека для Arduino, позволяющая взаимодействовать с кнопками более удобным способом черезе callbacks, избегая ручной обработки проверки нажатий (в том числе многократных) и удерживаний кнопки.</p>
+			  <p>Библиотека для Arduino, позволяющая взаимодействовать с кнопками более удобным способом через callbacks, избегая ручной обработки проверки нажатий (в том числе многократных) и удерживаний кнопки.</p>
 			  <p><u>Используемые технологии и/или железо:</u><br>C++, Arduino<p>
 			  <p><u>Tags:</u><br><span class="w3-text-indigo">#C++, #Arduino, #Button, #Events</span></p>
 			  </div>
 			  <hr>
 			</div>
+			
 			<div class="w3-container">
 			  <h5 class="w3-text-black"><b>3Game</b></h5>
 			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2014</h6>
 			  <p>Status: <span class="w3-tag w3-red w3-round">Lost sources</span></p>
 			  <div class="w3-left w3-margin-left">
-			  <a href="https://www.youtube.com/watch?v=zhm1hGW9pr0"><img src="https://i.ytimg.com/vi/zhm1hGW9pr0/0.jpg" style="width:60%"><br></a>
+			  <div class="w3-display-container w3-margin-bottom" style="width:80%">
+				<img class="w3-hover-opacity" onclick="openModal(this)" src="https://i.ytimg.com/vi/zhm1hGW9pr0/0.jpg" style="width:100%">
+				<div class="w3-display-middle w3-display-hover w3-xlarge">
+					<a href="https://www.youtube.com/watch?v=zhm1hGW9pr0">
+						<button class="w3-button w3-black w3-padding-0"><i class="fa fa-play-circle fa-fw w3-xlarge"></i> Play</button>
+					</a>
+				</div>
+			  </div>
 			  <p>Давным давно написаная игра, исходники которой, к сожалению, были безвозвратно утеряны.</p>
 			  <p><u>Используемые технологии и/или железо:</u><br>Game Maker, GML<p>
 			  <p><u>Tags:</u><br><span class="w3-text-indigo">#GameMaker, #GameMakerLanguage, #GML, #GameDevelopment, #Game, #Platformer</span></p>
 			  </div>
 			  <hr>
 			</div>
-			<!-- MarkovChains, Maze Game unity, 3Game -->
+			
+			<div class="w3-container">
+			  <h5 class="w3-text-black"><b>Maze Game</b></h5>
+			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018</h6>
+			  <p>Status: <span class="w3-tag w3-orange w3-round">Freezed</span>, because dunno how to increase FPS. Planing to remake it with 2D graphics.</p>
+			  <div class="w3-left w3-margin-left">
+			  <div class="w3-display-container w3-margin-bottom" style="width:80%">
+				<img class="w3-hover-opacity" onclick="openModal(this)" src="https://i1.ytimg.com/vi/kYo18RzLmnc/maxresdefault.jpg" style="width:100%">
+				<div class="w3-display-middle w3-display-hover w3-xlarge">
+					<a href="https://www.youtube.com/watch?v=kYo18RzLmnc">
+						<button class="w3-button w3-black w3-padding-0"><i class="fa fa-play-circle fa-fw w3-xlarge"></i> Play</button>
+					</a>
+				</div>
+			  </div>
+			  <p>Игра под Android, сделаная на основе описаного выше генератора лабиринтов. Разработка временно заморожена в связи с проблемой низкого FPS, которую я не знаю как решить. Планирую переделать всё в 2D.</p>
+			  <p><u>Используемые технологии и/или железо:</u><br>Unity, C#, Android<p>
+			  <p><u>Tags:</u><br><span class="w3-text-indigo">#Unity, #C#, #Android, #GameDevelopment, #Game, #Maze, #MazeGenerator</span></p>
+			  </div>
+			  <hr>
+			</div>
+			
+			<div class="w3-container">
+			  <h5 class="w3-text-black"><b>Random Text Generator</b></h5>
+			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2017</h6>
+			  <table class="w3-table w3-margin-bottom">
+			  <td class="w3-padding-small">Status: <span class="w3-tag w3-green w3-round">Finished</span></td>
+			  <td class="w3-padding-small"><a href="https://github.com/Quantum-0/MarkovChains">
+				<span class="w3-tag w3-blue w3-round w3-right"><i class="fa fa-github w3-hover-opacity"></i> Github page</span>
+			  </a></td>
+			  </table>
+			  <div class="w3-left w3-margin-left">
+			  <h3>TODO: ВСТАВИТЬ СКРИНШОТЫ</h3>
+			  <img class="w3-hover-opacity" src="" style="width:40%" onclick="openModal(this)" alt="1">
+			  <img class="w3-hover-opacity" src="" style="width:40%" onclick="openModal(this)" alt="2">
+			  <p>Генератор текста на основе марковских цепей.</p>
+			  <p><u>Используемые технологии и/или железо:</u><br>C#, .NET, WinForms<p>
+			  <p><u>Tags:</u><br><span class="w3-text-indigo">#C#, #WinForms, #Console, #Library, #MarkovChains</span></p>
+			  </div>
+			  <hr>
+			</div>
+			
+			<div class="w3-container">
+			  <h5 class="w3-text-black"><b>Tic Tac Toe Extended Game</b></h5>
+			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016</h6>
+			  <table class="w3-table w3-margin-bottom">
+			  <td class="w3-padding-small">Status: Almost <span class="w3-tag w3-green w3-round">Finished</span></td>
+			  <td class="w3-padding-small">
+				  <a href="https://github.com/Quantum-0/Tic_Tac_Toe_9x9">
+					<span class="w3-tag w3-blue w3-round w3-right w3-margin-left"><i class="fa fa-github w3-hover-opacity"></i> Github page</span>
+				  </a>
+				  <a href="https://habr.com/ru/post/183764/">
+					<span class="w3-tag w3-round w3-teal w3-right w3-margin-left">Idea</span>
+				  </a>
+			  </td>
+			  </table>
+			  <div class="w3-left w3-margin-left">
+			  <h3>TODO: ВСТАВИТЬ СКРИНШОТЫ</h3>
+			  <img class="w3-hover-opacity" src="" style="width:40%" onclick="openModal(this)" alt="1">
+			  <img class="w3-hover-opacity" src="" style="width:40%" onclick="openModal(this)" alt="2">
+			  <p>"Улучшеная" игра в крестики-нолики + искусственный интелект в качестве соперника</p>
+			  <p><u>Используемые технологии и/или железо:</u><br>C#, .NET, WinForms, WPF, AI<p>
+			  <p><u>Tags:</u><br><span class="w3-text-indigo">#C#, #WinForms, #WPF, #Game, #GameDevelopment, #ArtificialIntelligence</span></p>
+			  </div>
+			  <hr>
+			</div>
+			
+			<div class="w3-container">
+			  <h5 class="w3-text-black"><b>And so on</b></h5>
+			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>from ancient times to the present day</h6>
+				  <p class="w3-left w3-margin-left" style="margin-top:0px">Other project's I'm working, which is public and open source you can see on my GitHub.</p>
+				  <div class="w3-row">
+					<div class="w3-container w3-center">
+					  <a href="https://github.com/Quantum-0?tab=repositories">
+						<div class="w3-btn w3-blue w3-round" style="width:75%"><i class="fa fa-github w3-hover-opacity"></i> See all repositories</div>
+					  </a>
+					</div>
+				  </div>
+			  <hr>
+			</div>
+			<!-- Tic Tac Toe, Art Viewer, Python Scripts -->
 		</div>
 	  </div>
 
+	  <div class="w3-container w3-card w3-light-gray w3-margin-bottom">
+		<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-orange"></i>Comments</h2>
+		<div class="w3-container w3-margin-bottom">
+		<p>Here you can write any comments</p>
+			<div id="vk_comments" class="w3-center"></div>
+			<script type="text/javascript">
+			VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+			</script>
+		</div>
+	  </div>
+	  
     <!-- End Right Column -->
     </div>
     
@@ -321,12 +494,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </div>
 
 <footer class="w3-container w3-blue-gray w3-center w3-margin-top">
-  <p>Find me on social media.</p>
+	<br>Find me on social media.<br>
   <i onclick="location.href = 'tg://resolve?domain=quantum0'" class="fa fa-paper-plane w3-hover-opacity"></i>
   <i onclick="location.href = 'https://www.facebook.com/profile.php?id=100006596971509'" class="fa fa-facebook-official w3-hover-opacity"></i>
   <i onclick="location.href = 'https://github.com/quantum-0/'" class="fa fa-github w3-hover-opacity"></i>
-  <i onclick="location.href = 'https://vk.com/id20108853/'" class="fa fa-vk w3-hover-opacity"></i>
+  <i onclick="location.href = 'https://vk.com/id20108853'" class="fa fa-vk w3-hover-opacity"></i>
+  <i onclick="location.href = 'https://www.youtube.com/channel/UCoE1dyWYUsSa3yiUMnqor0g/videos'" class="fa fa-youtube w3-hover-opacity"></i>
   <i onclick="location.href = 'https://www.instagram.com/quantum075/'" class="fa fa-instagram w3-hover-opacity"></i>
+  <p/>
 </footer>
 
 </body>
