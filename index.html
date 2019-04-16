@@ -70,6 +70,25 @@
 			b.innerHTML = "<b>Show</b>"
 		}
 	}
+	function MinimazeOrMaximazeBlock(button, content)
+	{
+		var b = document.getElementById(button);
+		var x = document.getElementById(content);
+		
+		var min_html = '<i class="fa fa-window-minimize fa-fw w3-large w3-text-orange"></i>';
+		var max_html = '<i class="fa fa-window-maximize fa-fw w3-large w3-text-orange"></i>';
+		
+		if (b.innerHTML == max_html)
+		{
+			x.className = x.className.replace(" w3-hide", "");
+			b.innerHTML = min_html
+		}
+		else
+		{
+			x.className += " w3-hide";
+			b.innerHTML = max_html
+		}
+	}
 	</script>
 	
 <!-- Page Container -->
@@ -141,38 +160,49 @@
     <div class="w3-twothird">
     
       <div class="w3-container w3-card w3-light-gray w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-orange"></i>Work Experience</h2>
 		<div class="w3-container">
-          <h5 class="w3-text-black"><b>Инженер-программист микроконтроллеров / <a href="https://rubetek.com/">rubetek.com</a></b></h5>
-          <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2019 - <span class="w3-tag w3-orange w3-round">Current</span></h6>
-          <div class="w3-margin-left">
-		  <p>TODO: Дописать из оффера</p>
-		  <p><u>Стек используемых технологий:</u><br>TODO: Дописать из оффера<p>
-		  </div>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-text-black"><b>Python Developer / citilab.ru (Project work)</b></h5>
-          <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2019 - Apr 2019</h6>
-          <div class="w3-margin-left">
-		  <p>Backend-разработка сервиса для взаимодействия между собой существующих программных продуктов.</p>
-		  <p><u>Стек используемых технологий:</u><br>Python, Postgresql, RabbitMQ, Flask, SQLAlchemy<p>
-		  </div>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <!--<h5 class="w3-text-black"><b>Developer / ООО "Вебкран"</b></h5>-->
-		  <h5 class="w3-text-black"><b>Developer / Фриланс/Частная практика</b></h5>
-          <!--<h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2017 - Apr 2019</h6>-->
-          <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2019</h6>
-          <ul>
-			<li>Разработка встраиваемых систем (AVR, ESP8266, Raspberry Pi)</li>
-			<li>Разработка Desktop-приложений (C#)</li>
-			<li>Backend-разработка (Python, Flask, RabbitMQ, MQTT)</li>
-			<li>Game development (Unity, C#)</li>
-		  </ul>
-          <hr>
-        </div>
+			<div class="w3-left">
+				<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-orange"></i>Work Experience</h2>
+			</div>
+			<div class="w3-container w3-right" style="padding-top:20px">
+				<div id="minimize_work_exp_btn" class="w3-btn w3-margin-top" style="padding-top:0px; padding-bottom:0px; padding-left:8px; padding-right:8px" onclick="MinimazeOrMaximazeBlock('minimize_work_exp_btn','work_exp_content');">
+					<i class="fa fa-window-minimize fa-fw w3-large w3-text-orange"></i>
+				</div>
+			</div>
+		</div>
+		<div id="work_exp_content" class="w3-container">
+			<div class="w3-container">
+			  <h5 class="w3-text-black"><b>Инженер-программист микроконтроллеров / <a href="https://rubetek.com/">rubetek.com</a></b></h5>
+			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2019 - <span class="w3-tag w3-orange w3-round">Current</span></h6>
+			  <div class="w3-margin-left">
+			  <p>TODO: Дописать из оффера</p>
+			  <p><u>Стек используемых технологий:</u><br>TODO: Дописать из оффера<p>
+			  </div>
+			  <hr>
+			</div>
+			<div class="w3-container">
+			  <h5 class="w3-text-black"><b>Python Developer / citilab.ru (Project work)</b></h5>
+			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2019 - Apr 2019</h6>
+			  <div class="w3-margin-left">
+			  <p>Backend-разработка сервиса для взаимодействия между собой существующих программных продуктов.</p>
+			  <p><u>Стек используемых технологий:</u><br>Python, Postgresql, RabbitMQ, Flask, SQLAlchemy<p>
+			  </div>
+			  <hr>
+			</div>
+			<div class="w3-container">
+			  <!--<h5 class="w3-text-black"><b>Developer / ООО "Вебкран"</b></h5>-->
+			  <h5 class="w3-text-black"><b>Developer / Фриланс/Частная практика</b></h5>
+			  <!--<h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2017 - Apr 2019</h6>-->
+			  <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2019</h6>
+			  <ul>
+				<li>Разработка встраиваемых систем (AVR, ESP8266, Raspberry Pi)</li>
+				<li>Разработка Desktop-приложений (C#)</li>
+				<li>Backend-разработка (Python, Flask, RabbitMQ, MQTT)</li>
+				<li>Game development (Unity, C#)</li>
+			  </ul>
+			  <hr>
+			</div>
+		</div>
       </div>
 
       <div class="w3-container w3-card w3-light-gray w3-margin-bottom">
